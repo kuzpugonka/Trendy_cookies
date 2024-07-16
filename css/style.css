@@ -196,7 +196,7 @@ body {
 .order {
   margin-bottom: 102px;
 }
-.order.container {
+.order .container {
   position: relative;
 }
 .order-block {
@@ -206,7 +206,7 @@ body {
   backdrop-filter: blur(50px);
 }
 .order-form {
-  padding-left: 200px;
+  margin-left: 200px;
   max-width: 387px;
   padding: 40px 0 44px;
   box-sizing: border-box;
