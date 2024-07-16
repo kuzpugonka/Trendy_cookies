@@ -196,6 +196,9 @@ body {
 .order {
   margin-bottom: 102px;
 }
+.order.container {
+  position: relative;
+}
 .order-block {
   display: flex;
   margin-top: 103px;
@@ -248,4 +251,11 @@ body {
   position: relative;
   top: -58px;
   height: 559px;
+}
+.order-bg-img {
+  position: absolute;
+
+  top: 0;
+  right: calc(100% - 810px);
+  z-index: -1;
 }
