@@ -259,3 +259,13 @@ body {
   right: calc(100% - 810px);
   z-index: -1;
 }
+/* footer */
+.footer {
+  padding: 126px 0 50px;
+  text-align: center;
+}
+.rights {
+  margin-top: 14px;
+  font-size: 18px;
+  line-height: 1.3;
+}
