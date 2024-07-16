@@ -36,13 +36,13 @@ body {
   border: 0;
   outline: none;
   cursor: pointer;
-  transition: background-color .3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 .button:hover {
   background-color: #eeeeee;
 }
 .violet-btn {
-  background-color: #5243F4;
+  background-color: #5243f4;
   color: #fff;
 }
 .button.violet-btn:hover {
@@ -52,6 +52,7 @@ body {
   font-family: "Steppe-ExtraBold", sans-serif;
   font-size: 60px;
   line-height: 1;
+  text-align: center;
 }
 /* header */
 .header {
@@ -122,7 +123,7 @@ body {
 }
 .products-item {
   background-color: #fff;
-  color: #5D3427;
+  color: #5d3427;
 }
 .product-item-img {
   height: 202px;
@@ -153,15 +154,42 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.products-item-info {
-}
 .products-item-price {
   font-family: "Steppe-ExtraBold", sans-serif;
   font-size: 24px;
-  color: #5243F4;
+  color: #5243f4;
   margin-bottom: 10px;
 }
 .products-item-weight {
   font-size: 12px;
+}
+/* love */
+.love {
+  padding: 64px 0 150px;
+}
+.love-list {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+}
+.love-item {
+  width: 590px;
+  height: 453px;
+}
+.love-item-white {
+  background-color: #fff;
+  padding: 110px 80px;
+  box-sizing: border-box;
+  color: #5d3427;
+}
+.love-item-title {
+  font-family: "Steppe-ExtraBold", sans-serif;
+  font-size: 24px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+.love-item-text {
+  font-size: 18px;
+  line-height: 1.3;
 }
 
