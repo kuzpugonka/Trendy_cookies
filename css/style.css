@@ -36,9 +36,22 @@ body {
   border: 0;
   outline: none;
   cursor: pointer;
+  transition: background-color .3s ease-in-out;
 }
 .button:hover {
   background-color: #eeeeee;
+}
+.violet-btn {
+  background-color: #5243F4;
+  color: #fff;
+}
+.button.violet-btn:hover {
+  background-color: #3b2cd8;
+}
+.common-title {
+  font-family: "Steppe-ExtraBold", sans-serif;
+  font-size: 60px;
+  line-height: 1;
 }
 /* header */
 .header {
@@ -89,11 +102,66 @@ body {
   line-height: 1.3;
   margin-bottom: 40px;
 }
-.hero-action {
-}
+
 .hero-img {
   position: absolute;
   top: 0;
   right: 0;
   z-index: -1;
 }
+/* goods */
+.products {
+  padding: 100px 0;
+}
+
+.products-list {
+  display: grid;
+  grid-template-columns: repeat(3, 384px);
+  gap: 90px 24px;
+  margin-top: 110px;
+}
+.products-item {
+  background-color: #fff;
+  color: #5D3427;
+}
+.product-item-img {
+  height: 202px;
+  text-align: center;
+}
+.product-item-img img {
+  height: 272px;
+  top: -70px;
+  position: relative;
+  max-width: 100%;
+}
+.products-item-details {
+  padding: 24px;
+}
+.products-item-title {
+  font-family: "Steppe-ExtraBold", sans-serif;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.products-item-text {
+  height: 110px;
+  font-size: 14px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+.products-item-extra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.products-item-info {
+}
+.products-item-price {
+  font-family: "Steppe-ExtraBold", sans-serif;
+  font-size: 24px;
+  color: #5243F4;
+  margin-bottom: 10px;
+}
+.products-item-weight {
+  font-size: 12px;
+}
+
