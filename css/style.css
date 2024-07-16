@@ -4,13 +4,13 @@
 }
 @font-face {
   font-family: "Steppe-Book";
-  src: url("..fonts/Steppe-Book.ttf.ttf") format("truetype");
+  src: url("../fonts/Steppe-Book.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
 @font-face {
   font-family: "Steppe-ExtraBold";
-  src: url("fonts/Steppe-ExtraBold.ttf") format("truetype");
+  src: url("../fonts/Steppe-ExtraBold.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
@@ -31,7 +31,7 @@ body {
   box-sizing: border-box;
   padding: 18px;
   text-align: center;
-  font-style: 18px;
+  font-size: 18px;
   color: #5243f4;
   border: 0;
   outline: none;
@@ -60,7 +60,7 @@ body {
   gap: 50px;
 }
 .menu-item a {
-  font-style: 16px;
+  font-size: 16px;
   line-height: 1.3;
   text-decoration: none;
   cursor: pointer;
@@ -85,7 +85,7 @@ body {
 }
 .hero-text {
   max-width: 697px;
-  font-style: 18px;
+  font-size: 18px;
   line-height: 1.3;
   margin-bottom: 40px;
 }
