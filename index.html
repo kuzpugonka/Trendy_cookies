@@ -7,30 +7,31 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <header class="header">
-      <div class="container">
-        <div class="logo">
-          <img src="./image/logo.png" alt="logo" />
+    <main class="main">
+      <header class="header">
+        <div class="container">
+          <div class="logo">
+            <img src="./image/logo.png" alt="logo" />
+          </div>
+          <nav class="menu">
+            <ul class="menu-list">
+              <li class="menu-item">
+                <a href="#">Каталог</a>
+              </li>
+              <li class="menu-item">
+                <a href="#">О нас</a>
+              </li>
+              <li class="menu-item">
+                <a href="#">Оформление заказа</a>
+              </li>
+            </ul>
+          </nav>
         </div>
-        <nav class="menu">
-          <ul class="menu-list">
-            <li class="menu-item">
-              <a href="#">Каталог</a>
-            </li>
-            <li class="menu-item">
-              <a href="#">О нас</a>
-            </li>
-            <li class="menu-item">
-              <a href="#">Оформление заказа</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+      </header>
 
-    <main>
       <section class="hero">
         <div class="container">
+          <img class="line1" src="./image/line1.png" alt="line" />
           <div class="hero-info">
             <h1 class="hero-title">Магия вкуса в каждой крошке</h1>
             <p class="hero-text">
@@ -49,6 +50,7 @@
 
       <section class="products">
         <div class="container">
+          <img class="line2" src="./image/line2.png" alt="line" />
           <h2 class="common-title">Выберите печенье</h2>
           <div class="products-list">
             <!-- cart -->
@@ -207,9 +209,15 @@
       </section>
 
       <section class="order">
+          <img class="line3" src="./image/line3.png" alt="line" />
         <div class="container">
+
           <h2 class="common-title">Закажите печенье</h2>
-          <img class="order-bg-img" src="./image/breadcrumbs.png" alt="breadcrumbs">
+          <img
+            class="order-bg-img"
+            src="./image/breadcrumbs.png"
+            alt="breadcrumbs"
+          />
           <div class="order-block">
             <form class="order-form">
               <div class="order-form-text">
@@ -230,22 +238,24 @@
             </form>
 
             <div class="order-block-img">
-              <img class="order-img" src="./image/order.png" alt="Cookies image" />
+              <img
+                class="order-img"
+                src="./image/order.png"
+                alt="Cookies image"
+              />
             </div>
           </div>
         </div>
       </section>
-    </main>
 
-    <footer class="footer">
+      <footer class="footer">
         <div class="container">
-            <div class="logo">
-                <img src="./image/logo.png" alt="logo">
-            </div>
-            <div class="rights">
-                «Все права защищены»
-            </div>
+          <div class="logo">
+            <img src="./image/logo.png" alt="logo" />
+          </div>
+          <div class="rights">«Все права защищены»</div>
         </div>
-    </footer>
+      </footer>
+    </main>
   </body>
 </html>
