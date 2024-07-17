@@ -202,7 +202,9 @@ body {
   margin-bottom: 102px;
   position: relative;
 }
-
+.order .container {
+  position: relative;
+}
 .order-block {
   display: flex;
   margin-top: 103px;
