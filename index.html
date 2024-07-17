@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cookies</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <script src="./scripts/main.js" defer></script>
   </head>
   <body>
     <main class="main">
+
+      <div class="currency" title="Изменить валюту" id="change-currency">$</div>
+
       <header class="header">
         <div class="container">
           <div class="logo">
@@ -16,13 +20,13 @@
           <nav class="menu">
             <ul class="menu-list">
               <li class="menu-item">
-                <a href="#">Каталог</a>
+                <a data-link="products">Каталог</a>
               </li>
               <li class="menu-item">
-                <a href="#">О нас</a>
+                <a data-link="love">О нас</a>
               </li>
               <li class="menu-item">
-                <a href="#">Оформление заказа</a>
+                <a data-link="order">Оформление заказа</a>
               </li>
             </ul>
           </nav>
@@ -41,14 +45,14 @@
               подарить вам истинное кулинарное наслаждение.
             </p>
             <div class="hero-action">
-              <button class="button">Заказать</button>
+              <button class="button" id="hero-action-button">Заказать</button>
             </div>
             <img class="hero-img" src="./image/cookie.png" alt="cookie" />
           </div>
         </div>
       </section>
 
-      <section class="products">
+      <section class="products" id="products">
         <div class="container">
           <img class="line2" src="./image/line2.png" alt="line" />
           <h2 class="common-title">Выберите печенье</h2>
@@ -67,7 +71,7 @@
                 </p>
                 <div class="products-item-extra">
                   <div class="products-item-info">
-                    <div class="products-item-price">20 $</div>
+                    <div class="products-item-price" data-base-price="20">20 $</div>
                     <div class="products-item-weight">2 шт./ 200 гр.</div>
                   </div>
                   <button class="button violet-btn">Заказать</button>
@@ -88,7 +92,7 @@
                 </p>
                 <div class="products-item-extra">
                   <div class="products-item-info">
-                    <div class="products-item-price">24 $</div>
+                    <div class="products-item-price" data-base-price="24">24 $</div>
                     <div class="products-item-weight">2 шт./ 200 гр.</div>
                   </div>
                   <button class="button violet-btn">Заказать</button>
@@ -109,7 +113,7 @@
                 </p>
                 <div class="products-item-extra">
                   <div class="products-item-info">
-                    <div class="products-item-price">18 $</div>
+                    <div class="products-item-price" data-base-price="18">18 $</div>
                     <div class="products-item-weight">2 шт./ 200 гр.</div>
                   </div>
                   <button class="button violet-btn">Заказать</button>
@@ -130,7 +134,7 @@
                 </p>
                 <div class="products-item-extra">
                   <div class="products-item-info">
-                    <div class="products-item-price">24 $</div>
+                    <div class="products-item-price" data-base-price="24">24 $</div>
                     <div class="products-item-weight">2 шт./ 200 гр.</div>
                   </div>
                   <button class="button violet-btn">Заказать</button>
@@ -150,7 +154,7 @@
                 </p>
                 <div class="products-item-extra">
                   <div class="products-item-info">
-                    <div class="products-item-price">20 $</div>
+                    <div class="products-item-price" data-base-price="20">20 $</div>
                     <div class="products-item-weight">2 шт./ 200 гр.</div>
                   </div>
                   <button class="button violet-btn">Заказать</button>
@@ -174,18 +178,19 @@
                 </p>
                 <div class="products-item-extra">
                   <div class="products-item-info">
-                    <div class="products-item-price">18 $</div>
+                    <div class="products-item-price" data-base-price="18">18 $</div>
                     <div class="products-item-weight">2 шт./ 200 гр.</div>
                   </div>
                   <button class="button violet-btn">Заказать</button>
                 </div>
               </div>
             </div>
+            <!-- 7-12 товаров в ветке dz3 -->
           </div>
         </div>
       </section>
 
-      <section class="love">
+      <section class="love" id="love">
         <div class="container">
           <h2 class="common-title">Пекарня с любовью</h2>
           <div class="love-list">
@@ -208,7 +213,7 @@
         </div>
       </section>
 
-      <section class="order">
+      <section class="order" id="order">
           <img class="line3" src="./image/line3.png" alt="line" />
         <div class="container">
 
@@ -228,12 +233,12 @@
                 <input
                   type="text"
                   name=""
-                  id=""
+                  id="product"
                   placeholder="Выберите печенье"
                 />
-                <input type="text" name="" id="" placeholder="Ваше имя" />
-                <input type="text" name="" id="" placeholder="Ваш телефон" />
-                <button class="button violet-btn">Оформить заказ</button>
+                <input type="text" name="" id="name" placeholder="Ваше имя" />
+                <input type="text" name="" id="phone" placeholder="Ваш телефон" />
+                <button class="button violet-btn" id="order-action">Оформить заказ</button>
               </div>
             </form>
 
