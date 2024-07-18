@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<main class="main">
+  <div
+    class="currency"
+    title="Изменить валюту"
+    id="change-currency"
+    (click)="changeCurrency()"
+  >
+    {{ currency }}
+  </div>
+
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="../assets/image/logo.png" alt="logo" />
+      </div>
+      <nav class="menu">
+        <ul class="menu-list">
+          <li class="menu-item">
+            <a (click)="scrollTo(products)">Каталог</a>
+          </li>
+          <li class="menu-item">
+            <a (click)="scrollTo(love)">О нас</a>
+          </li>
+          <li class="menu-item">
+            <a (click)="scrollTo(order)">Оформление заказа</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <img class="line1" src="../assets/image/line1.png" alt="line" />
+      <div class="hero-info">
+        <h1 class="hero-title">Магия вкуса в каждой крошке</h1>
+        <p class="hero-text">
+          Наши рецепты вдыхают жизнь в изысканность ингредиентов: ароматное
+          натуральное масло, свежие сливки, чистый мёд и отборная мука. Мы
+          тщательно отбираем каждый компонент премиального печенья, стремясь
+          подарить вам истинное кулинарное наслаждение.
+        </p>
+        <div class="hero-action">
+          <button
+            class="button"
+            id="hero-action-button"
+            (click)="scrollTo(products)"
+          >
+            Заказать
+          </button>
+        </div>
+        <img class="hero-img" src="../assets/image/cookie.png" alt="cookie" />
+      </div>
+    </div>
+  </section>
+
+  <section class="products" id="products" #products>
+    <div class="container">
+      <img class="line2" src="../assets/image/line2.png" alt="line" />
+      <h2 class="common-title">Выберите печенье</h2>
+      <div class="products-list">
+        <!-- cart -->
+        <div *ngFor="let product of productsData" class="products-item">
+          <div class="product-item-img">
+            <img
+              src="../assets/image/goods/{{ product.image }}"
+              alt="products"
+            />
+          </div>
+          <div class="products-item-details">
+            <h3 class="products-item-title">{{ product.title }}</h3>
+            <p class="products-item-text">
+              {{ product.text }}
+            </p>
+            <div class="products-item-extra">
+              <div class="products-item-info">
+                <div class="products-item-price">
+                  {{ product.price }} {{ currency }}
+                </div>
+                <div class="products-item-weight">{{ product.weight }}</div>
+              </div>
+              <button class="button violet-btn"  (click)="scrollTo(order, product)">
+                Заказать
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="love" id="love" #love>
+    <div class="container">
+      <h2 class="common-title">Пекарня с любовью</h2>
+      <div class="love-list">
+        <div class="love-item love-item-white">
+          <h3 class="love-item-title">
+            Приготовлено с заботой, чтобы радовать вас каждый день
+          </h3>
+          <p class="love-item-text">
+            Мы с гордостью представляем наше печенье, которое мы выпекаем
+            вручную каждый день с 1995 года, используя только лучшие
+            ингредиенты. Погрузитесь в мир изысканных лакомств, приготовленных
+            с применением передовых технологий, и насладитесь их неповторимым
+            вкусом.
+          </p>
+        </div>
+        <div class="love-item love-item-img">
+          <img src="../assets/image/love.png" alt="Cookies image" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="order" id="order" #order>
+    <img class="line3" src="../assets/image/line3.png" alt="line" />
+    <div class="container">
+      <h2 class="common-title">Закажите печенье</h2>
+      <img
+        class="order-bg-img"
+        src="../assets/image/breadcrumbs.png"
+        alt="breadcrumbs"
+      />
+      <div class="order-block">
+        <form class="order-form">
+          <div class="order-form-text">
+            Откройте для себя волшебство вкуса с нашим премиальным печеньем!
+            Закажите прямо сейчас и окунитесь в мир сладких наслаждений.
+          </div>
+          <div class="order-form-inputs" [formGroup]="form">
+            <input
+              type="text" 
+              id="product"
+              placeholder="Выберите печенье"
+              formControlName="product"
+              [class]="{'error': form.get('product')?.invalid && (form.get('product')?.dirty || form.get('product')?.touched)}"
+              readonly
+            />
+
+            <input 
+              type="text"  
+              id="name" 
+              placeholder="Ваше имя" 
+              formControlName="name"
+              [class]="{'error': form.get('name')?.invalid && (form.get('name')?.dirty || form.get('name')?.touched)}"
+            />
+
+            <input 
+              type="text"  
+              id="phone" 
+              placeholder="Ваш телефон" 
+              formControlName="phone"
+              [class]="{'error': form.get('phone')?.invalid && (form.get('phone')?.dirty || form.get('phone')?.touched)}"
+            />
+
+            <button 
+              class="button violet-btn"              
+              type="button" 
+              id="order-action" 
+              (click)="confirmOrder()"
+              [disabled]="!form.valid">
+              Оформить заказ
+            </button>
+          </div>
+        </form>
+
+        <div class="order-block-img">
+          <img
+            class="order-img"
+            src="../assets/image/order.png"
+            alt="Cookies image"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="logo">
+        <img src="../assets/image/logo.png" alt="logo" />
+      </div>
+      <div class="rights">«Все права защищены»</div>
+    </div>
+  </footer>
+</main>
